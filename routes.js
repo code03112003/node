@@ -6,7 +6,7 @@ const Item = require('./models/model');
 router.post('/',async (req,res) =>{
   try{
     const item = new Item(req.body);
-    await time.save();
+    await item.save();
     res.status(201).send(item);
   } catch(err){
     res.status(400).send(err);
